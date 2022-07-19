@@ -195,6 +195,6 @@ let pages = [
     'Wolfie',
     'Yasmine',
     'Yia',
-];
+] as string[];
 
 export default pages;
