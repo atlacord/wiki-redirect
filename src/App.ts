@@ -8,8 +8,7 @@ dotenv.config();
 const port = process.env.PORT;
 
 app.get('/', (req, res) => {
-  console.log(req)
-  res.send('Hello World!')
+  res.redirect('https://avatar-the-last-airbender-discord.fandom.com')
 })
 
 pages.forEach(page => {
@@ -19,5 +18,5 @@ pages.forEach(page => {
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Wiki redirect up and running! Port: ${port}`)
 })
