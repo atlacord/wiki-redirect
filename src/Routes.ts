@@ -1,4 +1,4 @@
-let pages = [
+let pages: string[] = [
     '20,000_Members_Celebration',
     '2021_Yearbook',
     'ATLA_Rewatch',
@@ -46,6 +46,7 @@ let pages = [
     'Bread_Lotus',
     'British_Gangsters',
     'Bucky',
+    'Bun',
     'Bushy',
     'Bushy,_the_Bush_God',
     'Bushy,_the_Bush_Spirit',
@@ -123,7 +124,6 @@ let pages = [
     'Peanut_Gallery',
     'Phantom',
     'Pheobe',
-    'Phoebe',
     'Pinch',
     'Pink_role_protest',
     'Quote_Game',
