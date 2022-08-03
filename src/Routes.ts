@@ -1,4 +1,4 @@
-let pages: string[] = [
+let pages = [
     '20,000_Members_Celebration',
     '2021_Yearbook',
     'ATLA_Rewatch',
@@ -195,6 +195,7 @@ let pages: string[] = [
     'Wolfie',
     'Yasmine',
     'Yia',
+    'Zay'
 ] as string[];
 
 export default pages;
