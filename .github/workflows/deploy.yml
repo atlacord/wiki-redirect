@@ -5,6 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: webfactory/ssh-agent@v0.5.4
+        with: 
+          ssh-private-key: ${{ secrets.SSH_KEY }}
       - run: ssh root@143.198.191.221
       - run: git pull origin main
       - run: npm i --save-dev @types/node
