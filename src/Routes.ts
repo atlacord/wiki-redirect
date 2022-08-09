@@ -143,6 +143,7 @@ let pages = [
     'Silvianya',
     'Simp_Squad',
     'Soda',
+    'Sonic',
     'Spyder',
     'Starboard',
     'Stink_Lotus',
