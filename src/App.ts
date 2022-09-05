@@ -13,6 +13,10 @@ app.get('/', (req, res) => {
   res.redirect('https://avatar-the-last-airbender-discord.fandom.com')
 })
 
+app.get('/discord', (req, res) => {
+  res.redirect('https://discord.gg/QBKxgsfG7r')
+})
+
 app.get('/pages', async (req, res) => {
   let data;
   let pageList = JSON.stringify(pages);
