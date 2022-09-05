@@ -123,7 +123,7 @@ let pages = [
     'Pabu',
     'Peanut_Gallery',
     'Phantom',
-    'Pheobe',
+    'Phoebe',
     'Pinch',
     'Pink_role_protest',
     'Quote_Game',
