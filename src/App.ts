@@ -39,11 +39,6 @@ app.get('/avatar', async (req, res) => {
 app.get('/avatar/:userID', async (req, res) => {
   let member = await discord.getRESTGuildMember('370708369951948800', req.params.userID);
   res.redirect(`https://cdn.discordapp.com/avatars/${req.params.userID}/${member.avatar || member.user.avatar}?format=png&size=4096`);
-  // await axios.get(`https://cdn.discordapp.com/avatars/${req.params.userID}/${member.avatar || member.user.avatar}?format='png'?size=4096`, { responseType: 'arraybuffer' }).then(response => {
-  //   let blob = new Blob([response.data], { type: response.headers['content-type'] }) //@ts-ignore;
-  //   let image = URL.createObjectURL(blob)
-  //   res.send(image);
-  // });
 })
 
 pages.forEach(page => {
