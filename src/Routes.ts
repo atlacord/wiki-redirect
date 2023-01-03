@@ -8,6 +8,7 @@ let pages = [
     'Aiode',
     'Albedo',
     'Aledar',
+    'Anime_Club',
     'Appa',
     'Arbiter',
     'Arcadia',
