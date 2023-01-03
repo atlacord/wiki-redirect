@@ -1,10 +1,13 @@
 import express from 'express';
 import pages from './Routes.js';
+import { Client } from 'eris';
 import * as dotenv from 'dotenv';
+import axios from 'axios';
 import { readFile, writeFileSync } from 'fs';
 
 const app = express()
 dotenv.config();
+const discord = new Client(`Bot ${process.env.DISCORD_TOKEN}`, { restMode: true, intents: [] });
 
 const port = process.env.PORT;
 // const hostname = os.hostname;
@@ -28,6 +31,21 @@ app.get('/pages', async (req, res) => {
   })
 })
 
+app.get('/avatar', async (req, res) => {
+  return res.send(discord.user.id);
+  // return res.send('test');
+})
+
+app.get('/avatar/:userID', async (req, res) => {
+  let member = await discord.getRESTGuildMember('370708369951948800', req.params.userID);
+  res.redirect(`https://cdn.discordapp.com/avatars/${req.params.userID}/${member.avatar || member.user.avatar}?format=png&size=4096`);
+  // await axios.get(`https://cdn.discordapp.com/avatars/${req.params.userID}/${member.avatar || member.user.avatar}?format='png'?size=4096`, { responseType: 'arraybuffer' }).then(response => {
+  //   let blob = new Blob([response.data], { type: response.headers['content-type'] }) //@ts-ignore;
+  //   let image = URL.createObjectURL(blob)
+  //   res.send(image);
+  // });
+})
+
 pages.forEach(page => {
     app.get(`/${page}`, (req, res) => {
         res.redirect(`https://avatar-the-last-airbender-discord.fandom.com/wiki/${page}`);
@@ -35,5 +53,7 @@ pages.forEach(page => {
 })
 
 app.listen(port, () => {
+  discord.connect();
+  console.log(`Connected to Discord`);
   console.log(`Wiki redirect up and running! ${port}`)
 })
