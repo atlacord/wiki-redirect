@@ -49,6 +49,7 @@ pages.forEach(page => {
 
 app.listen(port, () => {
   discord.connect();
+  discord.editStatus('offline');
   console.log(`Connected to Discord`);
   console.log(`Wiki redirect up and running! ${port}`)
 })
