@@ -20,16 +20,16 @@ app.get('/discord', (req, res) => {
   res.redirect('https://discord.gg/QBKxgsfG7r')
 })
 
-app.get('/pages', async (req, res) => {
-  let data;
-  let pageList = JSON.stringify(pages);
-  writeFileSync('./build/pages.json', pageList);
-  readFile('./build/pages.json', 'utf8', function (err, data) {
-    if (err) throw err;
-  data = JSON.parse(data);
-  res.send(data);
-  })
-})
+// app.get('/pages', async (req, res) => {
+//   let data;
+//  let pageList = JSON.stringify(pages);
+//  writeFileSync('./build/pages.json', pageList);
+//  readFile('./build/pages.json', 'utf8', function (err, data) {
+//    if (err) throw err;
+//  data = JSON.parse(data);
+//  res.send(data);
+//  })
+// })
 
 app.get('/avatar', async (req, res) => {
   return res.send(discord.user.id);
