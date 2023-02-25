@@ -13,7 +13,7 @@ const port = process.env.PORT;
 // const hostname = os.hostname;
 
 app.get('/', (req, res) => {
-  res.redirect('https://avatar-the-last-airbender-discord.fandom.com')
+  res.redirect('https://wiki.atla.sh/Home')
 })
 
 app.get('/discord', (req, res) => {
@@ -43,7 +43,7 @@ app.get('/avatar/:userID', async (req, res) => {
 
 pages.forEach(page => {
     app.get(`/${page}`, (req, res) => {
-        res.redirect(`https://avatar-the-last-airbender-discord.fandom.com/wiki/${page}`);
+        res.redirect(`https://wiki.atla.sh/${page}`);
     })
 })
 
