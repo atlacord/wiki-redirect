@@ -1,9 +1,12 @@
 build
+target
+
 node_modules
 
 .env
 
 yarn.lock
+Cargo.lock
 
 *.vscode
 *.code-workspace
