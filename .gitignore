@@ -1,8 +1,6 @@
 build
 target
 
-.env
-
 Cargo.lock
 
 *.vscode
